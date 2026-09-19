@@ -1,0 +1,29 @@
+{
+  "fetchedAt": "2026-09-19T19:16:15.839Z",
+  "fetchedAtMs": 1789845375840,
+  "seconds": 1.3,
+  "source": "Carbon Intensity API (National Energy System Operator)",
+  "sourceUrl": "https://api.carbonintensity.org.uk/",
+  "licence": "CC BY 4.0",
+  "today": "2026-09-19",
+  "yesterday": "2026-09-18",
+  "now": {
+    "time": 1789842600000,
+    "from": "2026-09-19T18:30Z",
+    "to": "2026-09-19T19:00Z",
+    "actual": 95,
+    "forecast": 97,
+    "value": 95,
+    "index": "moderate"
+  },
+  "dayMax": 99,
+  "regionalMax": 400,
+  "yesterdayAverage": 61.42,
+  "yesterdayLowCarbon": 82.05,
+  "counts": {
+    "intensity": 48,
+    "mix": 9,
+    "regional": 18,
+    "history": 873
+  }
+}
