@@ -594,6 +594,13 @@
       ),
     );
     footer.append(credit);
+
+    const builtWith = el('p', null, 'Built with ');
+    const gridLink = el('a', null, 'Lattice Grid');
+    gridLink.href = 'https://www.latticegrid.dev/realtime-applications/';
+    builtWith.append(gridLink);
+    footer.append(builtWith);
+
     host.append(footer);
 
     built.destroy = () => {
