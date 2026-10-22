@@ -44,8 +44,8 @@ const shotIndex = args.indexOf('--shots');
 const shotDir = shotIndex >= 0 ? resolve(args[shotIndex + 1]) : null;
 const all = args.includes('--all');
 
-const GRID_VERSION = '1.87.0';
-const CDN_BASE = `https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@${GRID_VERSION}/`;
+const GRID_VERSION = '1.111.5';
+const CDN_BASE = `https://cdn.latticegrid.dev/lattice-grid@${GRID_VERSION}/`;
 const LIBRARY_TAGS = [
   { file: 'lattice-grid.min.js', global: 'LatticeGrid', member: 'createGrid' },
   { file: 'modules/charts.min.js', global: 'LatticeGrid', member: 'createChart' },
@@ -258,9 +258,9 @@ try {
     return {
       moduleScripts: scripts.filter((s) => s.type === 'module').length,
       importmaps: scripts.filter((s) => s.type === 'importmap').length,
-      librarySrcs: scripts.map((s) => s.getAttribute('src') || '').filter((src) => /cdn\\.jsdelivr\\.net/.test(src)),
-      withIntegrity: scripts.filter((s) => /cdn\\.jsdelivr\\.net/.test(s.src) && s.integrity).length,
-      stylesheetSrc: (document.querySelector('link[rel=stylesheet][href*="cdn.jsdelivr.net"]') || {}).href || null,
+      librarySrcs: scripts.map((s) => s.getAttribute('src') || '').filter((src) => /cdn\\.latticegrid\\.dev/.test(src)),
+      withIntegrity: scripts.filter((s) => /cdn\\.latticegrid\\.dev/.test(s.src) && s.integrity).length,
+      stylesheetSrc: (document.querySelector('link[rel=stylesheet][href*="cdn.latticegrid.dev"]') || {}).href || null,
       globals,
       members: {
         createGrid: typeof (window.LatticeGrid || {}).createGrid,
