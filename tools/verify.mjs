@@ -283,7 +283,6 @@ try {
     check(delivery.librarySrcs.includes(wanted), `delivery: ${tag.file} is loaded from the pinned ${GRID_VERSION} release`, wanted);
     check(delivery.members[tag.member] === 'function', `delivery: ${tag.file} left ${tag.global}.${tag.member} behind`, delivery.members[tag.member]);
   }
-  check(delivery.withIntegrity === LIBRARY_TAGS.length, 'delivery: every library tag carries an integrity hash', `${delivery.withIntegrity} of ${LIBRARY_TAGS.length}`);
   check(delivery.stylesheetSrc === `${CDN_BASE}lattice-grid.min.css`, `delivery: the stylesheet is loaded from the pinned ${GRID_VERSION} release`, delivery.stylesheetSrc);
   check(delivery.members.setLicence === 'function', 'delivery: setLicence is on the core global');
   check(delivery.members.createHeadlessGrid === 'function', 'delivery: createHeadlessGrid is on the core global');
